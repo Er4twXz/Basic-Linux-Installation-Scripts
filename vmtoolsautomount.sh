@@ -1,6 +1,6 @@
-#!/bin/bash
+!/bin/bash
 
-FSTAB_LINE=".host://mnt/hgfsfuse.vmhgfs-fuseauto,allow_other00"
+FSTAB_LINE=".host:/	/mnt/hgfs	fuse.vmhgfs-fuse	auto,allow_other	0	0"
 FSTAB_FILE="/etc/fstab"
 
 # Check if the line already exists
@@ -11,3 +11,4 @@ if ! grep -Fxq "$FSTAB_LINE" "$FSTAB_FILE"; then
 else
     echo "Line already exists in /etc/fstab."
 fi
+
